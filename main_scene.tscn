@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvew5wcgrqp4i"]
+
+[ext_resource type="PackedScene" uid="uid://b37d4jbddqx7" path="res://Prefabs/Surface/Road00.tscn" id="2_3sigl"]
+[ext_resource type="PackedScene" uid="uid://mrpmbg8jeumy" path="res://Prefabs/Building/CustomBlock00/CustomBlock00.tscn" id="3_qfb6n"]
+
+[sub_resource type="Environment" id="Environment_e0pap"]
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e0pap")
+
+[node name="Road00" parent="." instance=ExtResource("2_3sigl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.977429, 0, 1.29803)
+
+[node name="CustomBlock00" parent="." instance=ExtResource("3_qfb6n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82885, 1.01643, -0.640803)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.65242, -0.313844, 0.689819, -0.0392655, 0.895001, 0.444332, -0.75684, -0.316977, 0.571594, 0.512961, 2.89866, 3.73491)

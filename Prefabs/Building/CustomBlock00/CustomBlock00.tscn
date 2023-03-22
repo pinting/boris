@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://mrpmbg8jeumy"]
+
+[ext_resource type="PackedScene" uid="uid://ckx4lnhbyaxsi" path="res://Prefabs/Building/CustomBlock00/CustomBlock00.blend" id="1_qqs7e"]
+
+[node name="CustomBlock00" type="Node3D"]
+
+[node name="CustomBlock00" parent="." instance=ExtResource("1_qqs7e")]
