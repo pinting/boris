@@ -4,21 +4,23 @@
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m2ymh"]
 albedo_texture = ExtResource("1_0518c")
-uv1_scale = Vector3(10, 10, 10)
+uv1_scale = Vector3(100, 10, 10)
 
 [sub_resource type="BoxMesh" id="BoxMesh_abe36"]
 material = SubResource("StandardMaterial3D_m2ymh")
+size = Vector3(10, 0.1, 1)
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_lviyc"]
+size = Vector3(47.7339, 0.0148114, 4.75421)
 
-[node name="Road00" type="Node3D"]
+[node name="Road00" type="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.00710785, 0.0231137, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(2.84184, 0, 0, 0, 0.0061341, 0, 0, 0, 3.82612, 0.00710785, 0.0231137, 0)
+transform = Transform3D(5, 0, 0, 0, 0.1, 0, 0, 0, 5, 0.00710785, 0.0231137, 0)
 mesh = SubResource("BoxMesh_abe36")
+skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
 transform = Transform3D(1.04764, 0, 0, 0, 1.04764, 0, 0, 0, 1.04764, 0, 0, 0)
 shape = SubResource("BoxShape3D_lviyc")

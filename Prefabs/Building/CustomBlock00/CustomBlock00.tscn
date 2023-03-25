@@ -1,7 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://mrpmbg8jeumy"]
+[gd_scene load_steps=3 format=3 uid="uid://mrpmbg8jeumy"]
 
 [ext_resource type="PackedScene" uid="uid://ckx4lnhbyaxsi" path="res://Prefabs/Building/CustomBlock00/CustomBlock00.blend" id="1_qqs7e"]
 
-[node name="CustomBlock00" type="Node3D"]
+[sub_resource type="BoxShape3D" id="BoxShape3D_v6hk8"]
+size = Vector3(1.99409, 2.03272, 2.00102)
+
+[node name="CustomBlock00" type="StaticBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_v6hk8")
 
 [node name="CustomBlock00" parent="." instance=ExtResource("1_qqs7e")]

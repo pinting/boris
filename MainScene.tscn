@@ -1,0 +1,36 @@
+[gd_scene load_steps=6 format=3 uid="uid://dvew5wcgrqp4i"]
+
+[ext_resource type="PackedScene" uid="uid://b37d4jbddqx7" path="res://Prefabs/Surface/Road00.tscn" id="1_u475p"]
+[ext_resource type="PackedScene" uid="uid://mrpmbg8jeumy" path="res://Prefabs/Building/CustomBlock00/CustomBlock00.tscn" id="2_exs7e"]
+[ext_resource type="PackedScene" uid="uid://bk0ghhpwbmgod" path="res://Prefabs/Character/Character00/Character00.tscn" id="3_gq7xm"]
+
+[sub_resource type="Environment" id="Environment_e0pap"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_awmfv"]
+viewport_path = NodePath("SubViewport")
+
+[node name="MainScene" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_e0pap")
+
+[node name="Road00" parent="." instance=ExtResource("1_u475p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.344477, 0, 0.855736)
+
+[node name="CustomBlock00" parent="." instance=ExtResource("2_exs7e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.82885, 1.01643, -0.640803)
+
+[node name="Character00" parent="." instance=ExtResource("3_gq7xm")]
+transform = Transform3D(-0.0234377, 0, -0.999725, 0, 1, 0, 0.999725, 0, -0.0234377, -0.122196, 0.0159939, 2.01844)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.937265, 2.16767, 0.221355)
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(-1.44248e-08, 0, 0.33, 0, 0.33, 0, -0.33, 0, -1.44248e-08, -2.35484, 0.835367, 1.42751)
+texture = SubResource("ViewportTexture_awmfv")
+
+[node name="SubViewport" type="SubViewport" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="SubViewport"]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1.08927, 0.90414, 0.322083)
