@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://b37d4jbddqx7" path="res://Prefabs/Surface/Road00.tscn" id="1_u475p"]
 [ext_resource type="PackedScene" uid="uid://mrpmbg8jeumy" path="res://Prefabs/Building/CustomBlock00/CustomBlock00.tscn" id="2_exs7e"]
-[ext_resource type="PackedScene" uid="uid://bk0ghhpwbmgod" path="res://Prefabs/Character/Character00/Character00.tscn" id="3_gq7xm"]
+[ext_resource type="PackedScene" uid="uid://cw43wfuwguocq" path="res://Prefabs/Mixamo/Character00/Character00.tscn" id="3_gq7xm"]
 
 [sub_resource type="Environment" id="Environment_e0pap"]
 
